@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-template",
+  "version": "1.0.0",
+  "description": "Base template for Alan-M's preferred NodeJS settings",
+  "main": "index.js",
+  "scripts": {
+    "test:lint": "eslint . --ext .js,.json --ignore-pattern node_modules/",
+    "test": "npm run test:lint && npm run test:unit-test",
+    "test:unit-test": "npx nyc npx mocha index.spec.js $(find . -name '*.spec.js' -not -path './build/*' -not -path './node_modules/*')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanmiddleton-ibm/nodejs-template.git"
+  },
+  "keywords": [
+    "NodeJS-Template",
+    "Alan-M"
+  ],
+  "author": "alanmiddleton@uk.ibm.com",
+  "license": "EPL-2.0",
+  "bugs": {
+    "url": "https://github.com/alanmiddleton-ibm/nodejs-template/issues"
+  },
+  "homepage": "https://github.com/alanmiddleton-ibm/nodejs-template#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "mocha": "^8.2.1",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "eslint-plugin-json": "^2.1.2"
+  }
+}
