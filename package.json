@@ -4,6 +4,7 @@
   "description": "Base template for Alan-M's preferred NodeJS settings",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test:lint": "eslint . --ext .js,.json --ignore-pattern node_modules/",
     "test": "npm run test:lint && npm run test:unit-test",
     "test:unit-test": "npx nyc npx mocha index.spec.js $(find . -name '*.spec.js' -not -path './build/*' -not -path './node_modules/*')"
@@ -33,6 +34,8 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "eslint-plugin-json": "^2.1.2"
+    "eslint-plugin-json": "^2.1.2",
+    "express": "^4.17.1",
+    "https": "^1.0.0"
   }
 }
